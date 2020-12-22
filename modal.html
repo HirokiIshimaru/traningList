@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="ここに説明文を設定">
+    <title>modal</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@twitteraccount">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:title" content="サイトタイトル">
+    <meta property="og:description" content="サイト説明文">
+    <meta property="og:url" content="https://hoge.ecc.com/">
+    <meta property="og:image" content="https://hoge.ecc.com/ogp.png">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="logo.png">
+    <script src="https://kit.fontawesome.com/4d60fe16e7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+
+    <div id="modal" class="modal">
+         <div class="modal__inner">
+             <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+             <img src="img/image01.jpg" alt="">
+         </div>
+        <div id="modal__background" class="modal__background"></div>
+    </div>
+
+    <button id="modal__show">画像を見る</button>
+<script>
+    'use strict';
+{
+    const modal = document.getElementById('modal');
+    const show = document.getElementById('modal__show');
+    const close = document.getElementById('modal__close');
+    const backGround = document.getElementById('modal__background');
+
+    // つける   classリストをつける
+    show.addEventListener('click', ()=>{
+        modal.classList.add('is-show');
+        backGround.classList.add('is-show');
+    });
+
+    // 削除     classリストを非表示にする
+    close.addEventListener('click', ()=>{
+        modal.classList.remove('is-show');
+        backGround.classList.remove('is-show');
+    });
+
+    backGround.addEventListener('click' , ()=>{
+        close.click();
+    });
+}
+</script>
+</body>
+</html>

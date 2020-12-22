@@ -1,0 +1,65 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+header, footer {
+  width: 100%;
+  background-color: skyblue;
+}
+
+header p, footer p {
+  text-align: center;
+  line-height: 118px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+main {
+  width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+
+main .prebtn, main .nextbtn {
+  width: 50px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  background-color: rgba(17, 17, 17, 0.5);
+  transition: ease 0.3s;
+}
+
+main .prebtn:hover, main .nextbtn:hover {
+  background-color: rgba(17, 17, 17, 0.8);
+  cursor: pointer;
+}
+
+main .imgshow {
+  width: 100%;
+  height: 100%;
+  margin: 62px 0;
+  overflow: hidden;
+}
+
+main .imgshow__box {
+  width: 1920px;
+  display: flex;
+  text-align: center;
+}
+
+main .imgshow__box .image {
+  width: 100%;
+}
+
+main .nextbtn {
+  top: 0;
+  right: 0;
+}
+
+footer {
+  background-color: yellowgreen;
+}
